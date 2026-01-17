@@ -1,0 +1,46 @@
+PROJECT REPORT: Web Store
+==========================
+
+1. PROJECT OVERVIEW
+-------------------
+This project is a modern e-commerce web application built with React and Vite. It is designed to interface with Shopify's Storefront API to handle product browsing, cart management, and customer authentication.
+
+2. TECHNOLOGY STACK
+-------------------
+- Core Framework: React 19
+- Build Tool: Vite
+- Routing: React Router DOM v7
+- E-commerce Integration: shopify-buy (Shopify JavaScript Buy SDK) / Storefront API
+- Icons: Lucide React
+- Linting: ESLint
+
+3. ARCHITECTURE & FOLDER STRUCTURE
+----------------------------------
+The project follows a standard React application structure:
+
+- /src
+  - /components: Contains reusable UI elements (e.g., Layout, specific UI parts).
+  - /pages: Contains the main page views mapped to routes:
+    - Home, Shop, ProductDetails (Browsing)
+    - Cart, Wishlist (Shopping Utilities)
+    - SignIn, SignUp, Profile, Contact (User & Info)
+  - /context: Implements the Context API for global state management:
+    - AuthContext: Handles user login/signup state.
+    - WishlistContext: Manages user wishlist items.
+    - CartContext: (Inferred) Manages shopping cart state.
+  - /lib: Contains configuration and helper files, specifically `shopify.js` for initializing the Shopify client.
+  - /assets: Static assets.
+
+4. CURRENT IMPLEMENTATION STATUS
+--------------------------------
+- **Routing**: Main application routes are defined in `App.jsx`, covering the entire user journey from homepage to checkout preparation.
+- **Authentication**: 
+  - Login and Signup UI pages exist (`SignIn.jsx`, `SignUp.jsx`).
+  - `AuthContext.jsx` is currently using a mock implementation and is being prepared for integration with the real Shopify Storefront API.
+- **Shopify Configuration**: The `src/lib/shopify.js` file is set up to initialize the Shopify Client using environment variables (`VITE_SHOPIFY_STORE_DOMAIN`, `VITE_SHOPIFY_STOREFRONT_TOKEN`).
+
+5. NEXT STEPS
+-------------
+- Finalize the integration of Shopify Customer Authentication (Login/Signup) in `AuthContext` and `shopify.js`.
+- Ensure session persistence using secure token storage.
+- Verify the checkout flow and cart synchronization.

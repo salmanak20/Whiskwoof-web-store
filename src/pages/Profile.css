@@ -1,0 +1,157 @@
+.profile-page {
+    padding: 2rem;
+    background-color: var(--bg-color);
+    min-height: 80vh;
+}
+
+.profile-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    gap: 2rem;
+}
+
+.profile-header {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.profile-avatar {
+    width: 80px;
+    height: 80px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.profile-info h1 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.75rem;
+}
+
+.profile-email {
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.profile-role {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.orders-section {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.orders-section h2 {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.order-card {
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    transition: box-shadow 0.2s ease;
+}
+
+.order-card:hover {
+    box-shadow: var(--shadow-sm);
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.order-id {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.order-date {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.order-status {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.order-status.delivered {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.order-status.processing {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.order-status.shipped {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.order-items {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.order-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.no-orders {
+    text-align: center;
+    color: var(--text-secondary);
+    padding: 2rem;
+}
+
+@media (max-width: 640px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+}

@@ -1,0 +1,37 @@
+.breadcrumbs {
+    background-color: #f8f9fa;
+    /* Slightly darker than main bg if main is white, or transparent if needed */
+    padding: 0.75rem 0;
+    font-size: 0.875rem;
+    width: 100%;
+}
+
+.breadcrumbs-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.breadcrumbs a {
+    color: var(--color-text-light, #666);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.breadcrumbs a:hover {
+    color: var(--color-primary, #000);
+    text-decoration: underline;
+}
+
+.breadcrumb-separator {
+    margin: 0 0.5rem;
+    color: #ccc;
+}
+
+.breadcrumb-current {
+    color: var(--color-text-dark, #333);
+    font-weight: 500;
+}
