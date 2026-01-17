@@ -27,7 +27,7 @@ export const AuthProvider = ({ children }) => {
         setError(null);
         try {
             // 1. Check for Specific Admin Credentials FIRST
-            if (email === 'salmanyousafzai736@gmail.com' && password === 'Salman@123') {
+            if (email === 'abc@gmail.com' && password === 'abc@123') {
                 await new Promise(resolve => setTimeout(resolve, 800)); // Simulate delay
                 const adminUser = {
                     id: 'admin_001',
